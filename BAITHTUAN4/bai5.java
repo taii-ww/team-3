@@ -2,23 +2,24 @@ import java.util.Scanner;
 
 public class bai5 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner nhap = new Scanner(System.in);
         System.out.print("Nhap mot so nguyen: ");
-        int n = sc.nextInt();
+        int so = nhap.nextInt();
 
-        if (isPrime(n)) {
-            System.out.println(n + " la so nguyen to.");
+        if (isPrime(so)) {
+            System.out.println(so + " la so nguyen to.");
         } else {
-            System.out.println(n + " khong phai la so nguyen to.");
+            System.out.println(so + " khong phai la so nguyen to.");
         }
-        sc.close();
+        nhap.close();
     }
 
-    public static boolean isPrime(int n) {
-        if (n < 2) return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) return false;
+    public static boolean isPrime(int so) {
+        if (so < 2) return false;
+        for (int i = 2; i <= Math.sqrt(so); i++) {
+            if (so % i == 0) return false;
         }
         return true;
     }
 }
+
